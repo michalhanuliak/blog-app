@@ -20,6 +20,7 @@ export interface ISelectedUserState {
       name: string,
       catchPhrase: string,
       bs: string
-    }
-  } | {},
+    },
+  },
+  userPosts: [],
 }

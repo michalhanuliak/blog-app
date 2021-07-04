@@ -61,7 +61,7 @@ const PostSingle = () => {
     <PostSingleContainer>
       {isError && !isLoading && (
       <ErrorMessage>
-        Failed to fetch post. Try reload website or try again later.
+        Failed to fetch post. Please try reload website or try again later.
       </ErrorMessage>
       )}
       {isLoading

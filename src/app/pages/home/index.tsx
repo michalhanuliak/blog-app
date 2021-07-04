@@ -1,13 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PostGrid from '../../containers/postGrid';
 
-const Home = () => {
-  useEffect(() => {
-  }, []);
-
-  return (
-    <PostGrid />
-  );
-};
+const Home = () => (
+  <PostGrid />
+);
 
 export default Home;

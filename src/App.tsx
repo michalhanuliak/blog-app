@@ -7,8 +7,7 @@ import {
 
 import * as ROUTES from './constants/routes';
 import './App.css';
-import { Home, Post } from './app/pages';
-import UserDetail from './app/containers/userDetail';
+import { Home, Post, User } from './app/pages';
 import Navbar from './app/components/navbar';
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
           <Post />
         </Route>
         <Route path={`${ROUTES.USER}/:userId`}>
-          <UserDetail />
+          <User />
         </Route>
         <Route path={ROUTES.HOME}>
           <Home />

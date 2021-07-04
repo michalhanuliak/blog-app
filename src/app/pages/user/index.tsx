@@ -1,15 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import UserDetail from '../../containers/userDetail';
+import UserPosts from '../../containers/userPosts';
 
-const User = () => {
-  useEffect(() => {
-  }, []);
-
-  return (
-    <>
-      <UserDetail />
-    </>
-  );
-};
+const User = () => (
+  <>
+    <UserDetail />
+    <UserPosts />
+  </>
+);
 
 export default User;

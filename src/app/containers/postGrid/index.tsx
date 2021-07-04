@@ -62,7 +62,7 @@ const PostGrid = () => {
       {isLoading && <Loader />}
       {isError && !isLoading && (
       <ErrorMessage>
-        Failed to fetch posts. Try reload website or try again later.
+        Failed to fetch posts. Please try reload website or try again later.
       </ErrorMessage>
       )}
       {isEmptyPosts && !isLoading && <EmptyPosts> No posts were found </EmptyPosts>}

@@ -5,10 +5,8 @@ const selectSelectedPost = (state: IRootAppState) => state.selectedPost;
 export const makeSelectSelectedPost = createSelector(selectSelectedPost,
   (selectedPost) => selectedPost.postData);
 
-const selectSelectedPostAuthor = (state: IRootAppState) => state.selectedPost;
-export const makeSelectSelectedPostAuthor = createSelector(selectSelectedPostAuthor,
+export const makeSelectSelectedPostAuthor = createSelector(selectSelectedPost,
   (selectedPost) => selectedPost.author);
 
-const selectSelectedPostComments = (state: IRootAppState) => state.selectedPost;
-export const makeSelectSelectedPostComments = createSelector(selectSelectedPostComments,
+export const makeSelectSelectedPostComments = createSelector(selectSelectedPost,
   (selectedPost) => selectedPost.comments);

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
 
 import { setSelectedUser } from '../../pages/user/slice';
-import makeSelectSelectedUser from '../../pages/user/selectors';
+import { makeSelectSelectedUser } from '../../pages/user/selectors';
 import { IUser } from '../../../interfaces/IUser';
 import { UserDetailContainer } from './userDetail';
 import UserProfile from '../../components/userProfile';
@@ -66,7 +66,7 @@ const UserDetail = () => {
     <UserDetailContainer>
       {isError && !isLoading && (
       <ErrorMessage>
-        Failed to fetch user. Try reload website or try again later.
+        Failed to fetch user. Please try reload website or try again later.
       </ErrorMessage>
       )}
       {isLoading

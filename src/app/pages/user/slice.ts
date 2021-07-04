@@ -3,15 +3,29 @@ import { ISelectedUserState } from '../../../interfaces/ISelectedUserState';
 
 const initialState: ISelectedUserState = {
   userInfo: {
+    id: -1,
     name: '',
     username: '',
     email: '',
-    address: {},
+    address: {
+      street: '',
+      suite: '',
+      city: '',
+      zipcode: '',
+      geo: {
+        lat: '',
+        lng: '',
+      },
+    },
     phone: '',
     website: '',
-    company: {},
-    posts: [],
+    company: {
+      name: '',
+      catchPhrase: '',
+      bs: '',
+    },
   },
+  userPosts: [],
 };
 
 export const selectedUserSlice = createSlice({
@@ -21,10 +35,14 @@ export const selectedUserSlice = createSlice({
     setSelectedUser: (state, action) => {
       state.userInfo = action.payload;
     },
+    setSelectedUserPosts: (state, action) => {
+      state.userPosts = action.payload;
+    },
   },
 });
 
 export const {
   setSelectedUser,
+  setSelectedUserPosts,
 } = selectedUserSlice.actions;
 export default selectedUserSlice.reducer;

@@ -3,7 +3,8 @@ import { IRootAppState } from '../../../interfaces/IRootAppState';
 
 const selectSelectedUser = (state: IRootAppState) => state.selectedUser;
 
-const makeSelectSelectedUser = createSelector(selectSelectedUser,
+export const makeSelectSelectedUser = createSelector(selectSelectedUser,
   (selectedUser) => selectedUser.userInfo);
 
-export default makeSelectSelectedUser;
+export const makeSelectSelectedUserPosts = createSelector(selectSelectedUser,
+  (selectedUser) => selectedUser.userPosts);
