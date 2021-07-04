@@ -1,13 +1,11 @@
 import styled from '@emotion/styled';
 import tw from 'twin.macro';
 
-const PostLoaderContainer = styled.div`
+const PostSingleContainer = styled.div`
   ${tw`
-    justify-center
-    items-center
-    flex
-    h-96
+    h-auto
   `};
+  min-height: 10rem;
 `;
 
-export default PostLoaderContainer;
+export default PostSingleContainer;

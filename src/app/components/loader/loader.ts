@@ -10,7 +10,7 @@ const LoaderContainer = styled.div`
     items-center
     flex
     w-full
-    h-36
+    h-60
   `};
 `;
 

@@ -60,8 +60,7 @@ const CommentsList = () => {
         Failed to fetch comments. Try reload website or try again later.
       </ErrorMessage>
       )}
-      <CommentsTitle>{`Comments: ${comments.length}`}</CommentsTitle>
-      {isLoading && <Loader />}
+      {isLoading ? <Loader /> : <CommentsTitle>{`Comments: ${comments.length}`}</CommentsTitle>}
       {isEmptyComments && !isLoading && <EmptyComments> No comments were found </EmptyComments>}
       {!isEmptyComments && !isLoading && commentsRender}
     </CommentsListContainer>

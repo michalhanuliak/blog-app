@@ -9,6 +9,7 @@ import { setSelectedPost, setSelectedPostAuthor } from '../../pages/post/slice';
 import { makeSelectSelectedPost, makeSelectSelectedPostAuthor } from '../../pages/post/selectors';
 import Loader from '../../components/loader';
 import ErrorMessage from '../../components/errorMessage';
+import PostSingleContainer from './postSingle';
 
 const actionDispatch = (dispatch: Dispatch) => ({
   setSelectedPost:
@@ -57,7 +58,7 @@ const PostSingle = () => {
   }, []);
 
   return (
-    <>
+    <PostSingleContainer>
       {isError && !isLoading && (
       <ErrorMessage>
         Failed to fetch post. Try reload website or try again later.
@@ -66,7 +67,7 @@ const PostSingle = () => {
       {isLoading
         ? <Loader />
         : <PostDetail title={title} body={body} author={author} /> }
-    </>
+    </PostSingleContainer>
   );
 };
 
